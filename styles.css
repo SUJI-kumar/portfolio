@@ -760,6 +760,20 @@ body.dark-mode {
     }
 }
 
+@media (max-width: 992px) {
+
+    .about-grid {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .contact-info-block {
+        order: -1;
+        width: 100%;
+    }
+}
+
+
 @media (max-width: 768px) {
     .navbar {
         flex-wrap: wrap;
@@ -804,6 +818,20 @@ body.dark-mode {
     .contact-wrapper {
         gap: 20px;
     }
+
+    .experience-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .contact-wrapper {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .contact-info,
+    .contact-form {
+        width: 100%;
+    }
 }
 
 /* Hamburger Menu Icon */
@@ -814,4 +842,27 @@ body.dark-mode {
 
 .theme-switch-wrapper {
     margin-left: auto;
+}
+
+@media (max-width: 992px) {
+    #about .job-entry {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .cta-buttons a {
+        display: block;          /* stack vertically */
+        margin: 10px 0;          /* spacing between buttons */
+        width: 100%;
+        text-align: center;
+    }
+
+    .cta-buttons {
+        display: block;          /* ensure vertical stacking */
+    }
 }
