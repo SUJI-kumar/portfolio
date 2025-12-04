@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sujit Kumar - Software Engineer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="preloader"></div>
+
+    <header id="header">
+        <div class="container navbar">
+            <a href="#hero" class="logo gradient-text">Sujit Kumar</a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#education">Education & Awards</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li class="theme-switch-wrapper">
+                        <label class="theme-switch" for="theme-toggle">
+                            <input type="checkbox" id="theme-toggle">
+                            <span class="slider"></span>
+                        </label>
+                    </li>
+                </ul>
+            </nav>
+            <div class="menu-btn"><i class="fas fa-bars"></i></div>
+        </div>
+    </header>
+
+    <section id="hero">
+        <div class="container hero-content">
+            <img src="profilepic.jpg" alt="Sujit Kumar Profile" class="profile-pic animate-on-scroll" data-delay="0">
+            <h1 class="animate-on-scroll" data-delay="1">Sujit Kumar</h1>
+            <p class="animate-on-scroll" data-delay="2">Software Engineer | Java Backend Developer</p>
+            <div class="cta-buttons animate-on-scroll" data-delay="3">
+                <a href="mailto:singhsujit1999@gmail.com"><i class="fas fa-envelope"></i> Email Me</a>
+                <a href="https://linkedin.com/in/sujitkumar01" target="_blank"><i class="fab fa-linkedin-in"></i> LinkedIn Profile</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section-spacing">
+        <div class="container">
+            <div class="section-title animate-on-scroll" data-delay="0">
+                <h2>About Me</h2>
+            </div>
+            
+            <div class="about-grid">
+                <div class="job-entry animate-on-scroll" data-delay="1">
+                    <h3>Summary: Results-Driven Software Engineer</h3>
+                    <p>
+                        Results-driven Software Engineer with 4+ years of experience in designing and building scalable Java-based backend systems, distributed frameworks, and automation platforms. Strong expertise in Spring Boot, REST APIs, Multithreading, Microservices Architecture, Data Processing, and system performance optimizations. Proven contribution to end-to-end solution development—from architecture and coding to deployment and improvement, consistently delivering high-impact, cost-saving solutions.
+                    </p>
+                    <p style="margin-top: 15px;">
+                        My current focus involves data storage optimization and high-performance ETL pipeline development, leveraging technologies like Elasticsearch, Aurora (PostgreSQL), and Kafka to manage and process petabytes of transactional data efficiently in a cloud (AWS) environment.
+                    </p>
+                </div>
+                
+                <div class="contact-info-block animate-on-scroll" data-delay="2">
+                    <h3>Contact & Details</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt" style="color: var(--primary);"></i> Location: Gurgaon, India</li>
+                        <li><i class="fas fa-phone-alt" style="color: var(--primary);"></i><p>Phone: <a href="tel:+916283614173">+91 6283614173</a></p></li>
+                        <li><i class="fas fa-envelope" style="color: var(--primary);"></i> Email: <a href="mailto:singhsujit1999@gmail.com">singhsujit1999@gmail.com</a></li>
+                        <li><i class="fab fa-linkedin" style="color: var(--primary);"></i> LinkedIn: <a href="https://linkedin.com/in/sujitkumar01" target="_blank">linkedin.com/in/sujitkumar01</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="section-spacing" style="background-color: var(--background-light);">
+        <div class="container">
+            <div class="section-title animate-on-scroll" data-delay="0">
+                <h2>Work Experience</h2>
+            </div>
+
+            <div class="experience-grid">
+                <div class="job-entry animate-on-scroll" data-delay="1">
+                    <div class="job-header">
+                        <h3><i class="fas fa-server gradient-text"></i> Software Engineer / Java Developer</h3>
+                        <p class="company-name">Priority Technology Holdings</p>
+                        <p class="duration">Nov 2021 – 2025(Dec) | Chandigarh, India</p>
+                    </div>
+                    
+                    <span class="project-title">Project: MXC Reporting Storage Optimization (Data Architecture)</span>
+                    <ul class="job-details">
+                        <li>Storage Optimization & Cost Reduction: Led the optimization of the MXC reporting platform managing 140TB+ of custom transactional data after migration to Elasticsearch Cloud.</li>
+                        <li>Hybrid Architecture Design: Designed a hybrid storage architecture by indexing only search-required fields in Elasticsearch and shifting non-searchable / historical fields to Aurora (PostgreSQL), preventing ES index bloat.</li>
+                        <li>Data Migration: Migrated 45TB of reporting data using a custom Python migration script deployed on AWS EC2, ensuring reliable, incremental, and performant data transfer.</li>
+                        <li>Pipeline Implementation: Implemented data trimming and selective indexing pipelines via Kafka + Streamliner, ensuring only relevant reporting attributes are indexed.</li>
+                        <li>Performance Gain: Enabled on-demand field hydration from Aurora during report generation, maintaining query accuracy while significantly improving search responsiveness.</li>
+                        <li>Impact: Reduced projected Elasticsearch storage growth and contributed to lowering cloud infrastructure cost (baseline $110K/month), expecting 70% reduction.</li>
+                        <li>Leadership: Mentored and guided a team of 4 developers across design, refactoring, and phased rollout.</li>
+                    </ul>
+                    
+                    <span class="project-title">Project: iRest Framework (API Automation and Data Processing Platform)</span>
+                    <ul class="job-details">
+                        <li>Framework Architecture: Architected and enhanced iRest Framework to process settlement and reconciliation pipelines for major payment processors (Fiserv, TSYS, Omaha).</li>
+                        <li>Performance Optimization: Implemented parallel execution using Java's ForkJoinPool, reducing runtime for reconciliation jobs from 300+ mins to 120 mins (a 60% reduction).</li>
+                        <li>DevOps & Logging: Dockerized and deployed the platform on AWS EC2. Automated execution logging and auto-created Jira tickets on failure.</li>
+                        <li>Integration: Integrated with TESTRAIL APIs to automate test tracking and reporting.</li>
+                    </ul>
+                    
+                    <span class="project-title">Project: iRest Workbench (Frontend + Backend Enhancements)</span>
+                    <ul class="job-details">
+                        <li>Backend Enhancements: Designed backend REST orchestration for complex workflow executions across multiple environments.</li>
+                        <li>Caching: Implemented Redis caching to reduce database load and improve API responsiveness.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+        <!-- <br>
+        <div class="container">
+            <div class="experience-grid">
+                <div class="job-entry animate-on-scroll" data-delay="1">
+                    <div class="job-header">
+                        <h3><i class="fas fa-server gradient-text"></i> Software Engineer / Java Developer</h3>
+                        <p class="company-name">Priority Technology Holdings</p>
+                        <p class="duration">Nov 2021 – Present | Chandigarh, India</p>
+                    </div>
+                    
+                    <span class="project-title">Project: MXC Reporting Storage Optimization (Data Architecture)</span>
+                    <ul class="job-details">
+                        <li>Storage Optimization & Cost Reduction: Led the optimization of the MXC reporting platform managing 140TB+ of custom transactional data after migration to Elasticsearch Cloud.</li>
+                        <li>Hybrid Architecture Design: Designed a hybrid storage architecture by indexing only search-required fields in Elasticsearch and shifting non-searchable / historical fields to Aurora (PostgreSQL), preventing ES index bloat.</li>
+                        <li>Data Migration: Migrated 45TB of reporting data using a custom Python migration script deployed on AWS EC2, ensuring reliable, incremental, and performant data transfer.</li>
+                        <li>Pipeline Implementation: Implemented data trimming and selective indexing pipelines via Kafka + Streamliner, ensuring only relevant reporting attributes are indexed.</li>
+                        <li>Performance Gain: Enabled on-demand field hydration from Aurora during report generation, maintaining query accuracy while significantly improving search responsiveness.</li>
+                        <li>Impact: Reduced projected Elasticsearch storage growth and contributed to lowering cloud infrastructure cost (baseline $110K/month), expecting 70% reduction.</li>
+                        <li>Leadership: Mentored and guided a team of 4 developers across design, refactoring, and phased rollout.</li>
+                    </ul>
+                    
+                    <span class="project-title">Project: iRest Framework (API Automation and Data Processing Platform)</span>
+                    <ul class="job-details">
+                        <li>Framework Architecture: Architected and enhanced iRest Framework to process settlement and reconciliation pipelines for major payment processors (Fiserv, TSYS, Omaha).</li>
+                        <li>Performance Optimization: Implemented parallel execution using Java's ForkJoinPool, reducing runtime for reconciliation jobs from 300+ mins to 120 mins (a 60% reduction).</li>
+                        <li>DevOps & Logging: Dockerized and deployed the platform on AWS EC2. Automated execution logging and auto-created Jira tickets on failure.</li>
+                        <li>Integration: Integrated with TESTRAIL APIs to automate test tracking and reporting.</li>
+                    </ul>
+                    
+                    <span class="project-title">Project: iRest Workbench (Frontend + Backend Enhancements)</span>
+                    <ul class="job-details">
+                        <li>Backend Enhancements: Designed backend REST orchestration for complex workflow executions across multiple environments.</li>
+                        <li>Caching: Implemented Redis caching to reduce database load and improve API responsiveness.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div> -->
+    </section>
+    
+    <section id="skills" class="skills section-spacing">
+        <div class="container">
+            <div class="section-title animate-on-scroll" data-delay="0">
+                <h2>Technical Skills</h2>
+            </div>
+            
+            <div class="skills-grid">
+                
+                <div class="skill-card animate-on-scroll" data-delay="1">
+                    <div class="skill-icon"><i class="fas fa-mug-hot"></i></div>
+                    <h3>Backend & Core</h3>
+                    <p>Java (Expert), Spring Boot, Hibernate, REST API, Multithreading (ForkJoinPool), WebSocket, Design Patterns, Microservices Principles.</p>
+                </div>
+
+                <div class="skill-card animate-on-scroll" data-delay="2">
+                    <div class="skill-icon"><i class="fas fa-database"></i></div>
+                    <h3>Databases & Data</h3>
+                    <p>MySQL, PostgreSQL (Aurora), Elasticsearch, Kafka, Redis, Data Processing, Data-driven Frameworks.</p>
+                </div>
+
+                <div class="skill-card animate-on-scroll" data-delay="3">
+                    <div class="skill-icon"><i class="fas fa-cloud"></i></div>
+                    <h3>Tools & DevOps</h3>
+                    <p>Docker, Jenkins (CI/CD), Git (Bitbucket,github), AWS EC2, Linux, System Design, Eclipse.</p>
+                </div>
+                
+                <div class="skill-card animate-on-scroll" data-delay="4">
+                    <div class="skill-icon"><i class="fas fa-code"></i></div>
+                    <h3>Other Languages/Tools</h3>
+                    <p>Python (Migration Scripts), JavaScript, TypeScript, Redux, Algorithms.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="education" class="section-spacing" style="background-color: var(--background-light);">
+        <div class="container">
+            <div class="section-title animate-on-scroll" data-delay="0">
+                <h2>Education & Awards</h2>
+            </div>
+            
+            <div class="education-awards-grid">
+                
+                <div class="education-entry animate-on-scroll" data-delay="1">
+                    <h3><i class="fas fa-graduation-cap gradient-text"></i> Education</h3>
+                    
+                    <p><strong>Lovely Professional University</strong></p>
+                    <p>B.Tech (Hons.) in Computer Science and Engineering (<span class="duration">2018 – 2022</span>)</p>
+                    <p>CGPA: 7.9</p>
+
+                    <p><strong>Vivek Bharti , Haryana</strong></p>
+                    <p>Senior Secondary (Class XII), Science (HBSE)</p>
+                    <p>CGPA: 8.2</p>
+
+                    <p><strong>Arya High, Haryana</strong></p>
+                    <p>Secondary (Class X) (HBSE)</p>
+                    <p>CGPA: 8.1</p>
+                </div>
+                
+
+                <div class="award-certification-entry animate-on-scroll" data-delay="2">
+                    <h3><i class="fas fa-award gradient-text"></i> Awards & Certifications</h3>
+                    
+                    <p style="margin-bottom: 10px;">Awards:</p>
+                    <ul class="certifications-list">
+                        <li><i class="fas fa-trophy"></i> Spot Award (3x) - Recognized for consistently delivering high-impact solutions and improvements.</li>
+                    </ul>
+                    
+                    <p style="margin-top: 20px; margin-bottom: 10px;">Certifications:</p>
+                    <ul class="certifications-list">
+                        <li><i class="fab fa-docker"></i> Docker (2025) - Udemy Certificate</li>
+                        <li><i class="fas fa-certificate"></i> Bootstrap (2020) - Coursera Certificate</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact" class="contact section-spacing">
+        <div class="container">
+            <div class="section-title animate-on-scroll" data-delay="0">
+                <h2>Get In Touch</h2>
+            </div>
+            
+            <div class="contact-wrapper">
+                
+                <div class="contact-info animate-on-scroll" data-delay="1">
+                    <h3>Direct Contact</h3>
+                    <p>I am interested in challenging Senior Backend and Systems Architecture roles. Feel free to connect directly via LinkedIn or email regarding new opportunities.</p>
+
+                    <ul class="contact-details">
+                        <li>
+                            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                            <div>
+                                Email: <a href="mailto:singhsujit1999@gmail.com">singhsujit1999@gmail.com</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+                            <p>Phone: <a href="tel:+916283614173">+91 6283614173</a></p>
+                        </li>
+                    </ul>
+
+                    <div class="social-links">
+                        <a href="https://linkedin.com/in/sujitkumar01" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/SUJI-kumar" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a> 
+                        <a href="mailto:singhsujit1999@gmail.com" target="_blank" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+
+                <div class="contact-form animate-on-scroll" data-delay="2">
+                    <form action="https://docs.google.com/forms/d/e/1FAIpQLSdDcVtOQ_nmDle2Va4VYD2o0D3fXtvnn-mUg1L-2-Uq3-DUUw/formResponse" 
+                        method="POST" 
+                        target="_blank"> <h3>Send a Message</h3>
+                        
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" 
+                                id="name" 
+                                name="entry.8045939" 
+                                class="form-control" 
+                                required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Your Email</label>
+                            <input type="email" 
+                                id="email" 
+                                name="entry.452569067" 
+                                class="form-control" 
+                                required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" 
+                                    name="entry.541848621" 
+                                    class="form-control" 
+                                    required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn">Send Message</button>
+                     </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-logo">Sujit Kumar</div>
+            <p>&copy;2025 Sujit Kumar. All Rights Reserved.</p>
+            <div class="footer-links">
+                <a href="#about">About</a>
+                <a href="#experience">Experience</a>
+                <a href="#skills">Skills</a>
+                <a href="#contact">Contact</a>
+            </div>  
+        </div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const header = document.getElementById('header');
+            const menuBtn = document.querySelector('.menu-btn');
+            const navLinks = document.querySelector('.nav-links');
+            const backToTop = document.getElementById('back-to-top');
+            const themeToggle = document.getElementById('theme-toggle');
+
+            // --- Sticky Header and Back-to-Top Visibility ---
+            const handleScroll = () => {
+                // Header style change
+                if (window.scrollY > 50) {
+                    header.classList.add('header-scrolled');
+                } else {
+                    header.classList.remove('header-scrolled');
+                }
+                
+                // Back to top visibility
+                if (window.scrollY > 400) {
+                    backToTop.classList.add('active');
+                } else {
+                    backToTop.classList.remove('active');
+                }
+            };
+
+            window.addEventListener('scroll', handleScroll);
+            handleScroll(); // Initial check
+
+            // --- Menu Toggle (Mobile) ---
+            menuBtn.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+
+            // Close mobile menu when a link is clicked
+            navLinks.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    // Check if the link is NOT the theme toggle wrapper
+                    if (!link.closest('.theme-switch-wrapper')) {
+                        navLinks.classList.remove('active');
+                    }
+                });
+            });
+
+            // --- Back to Top Click Handler ---
+            backToTop.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+            
+            // --- Theme Toggle (Dark/Light Mode) ---
+            const enableDarkMode = () => {
+                document.body.classList.add('dark-mode');
+                localStorage.setItem('theme', 'dark');
+            };
+
+            const disableDarkMode = () => {
+                document.body.classList.remove('dark-mode');
+                localStorage.setItem('theme', 'light');
+            };
+
+            // Check system preference or saved preference
+            if (localStorage.getItem('theme') === 'dark' || 
+                (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                enableDarkMode();
+                themeToggle.checked = true;
+            } else {
+                disableDarkMode();
+            }
+
+            themeToggle.addEventListener('change', () => {
+                if (themeToggle.checked) {
+                    enableDarkMode();
+                } else {
+                    disableDarkMode();
+                }
+            });
+
+            // --- Scroll Animation Logic ---
+            const elements = document.querySelectorAll('.animate-on-scroll');
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const delay = entry.target.dataset.delay || 0;
+                        setTimeout(() => {
+                            entry.target.classList.add('animated');
+                        }, delay * 150); // Delay in ms
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            elements.forEach(el => observer.observe(el));
+            
+            // --- Smooth Scrolling for Navigation ---
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    
+                    if (targetElement) {
+                        const headerHeight = document.getElementById('header').offsetHeight;
+                        const elementPosition = targetElement.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - headerHeight - 20; // -20 for extra padding
+
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: "smooth"
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
